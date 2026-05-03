@@ -25,3 +25,11 @@ services:
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:29092,PLAINTEXT_HOST://0.0.0.0:9092
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+  test-service:
+    image: alpine
+    container_name: test-container
+    command: ["echo", "hello from docker"]
+  imathe-service:
+    image: the
+    container_name: image
+    command: ["echo", "i am the emperor"]
